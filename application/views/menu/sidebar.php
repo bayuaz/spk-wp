@@ -1,125 +1,205 @@
-        <!--**********************************
-            Sidebar start
-        ***********************************-->
-        <div class="quixnav">
-            <div class="quixnav-scroll">
-                <ul class="metismenu" id="menu">
-                    <li class="nav-label first">Main Menu</li>
-                    <!-- <li><a href="index.html"><i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
-                    </li> -->
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/index.html">Dashboard 1</a></li>
-                            <li><a href="./assets/template/focus-2/index2.html">Dashboard 2</a></li>
-                        </ul>
-                    </li>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-                    <li class="nav-label">Apps</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-app-store"></i><span class="nav-text">Apps</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/app-profile.html">Profile</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="./assets/template/focus-2/email-compose.html">Compose</a></li>
-                                    <li><a href="./assets/template/focus-2/email-inbox.html">Inbox</a></li>
-                                    <li><a href="./assets/template/focus-2/email-read.html">Read</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./app-calender.html">Calendar</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-chart-bar-33"></i><span class="nav-text">Charts</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/chart-flot.html">Flot</a></li>
-                            <li><a href="./assets/template/focus-2/chart-morris.html">Morris</a></li>
-                            <li><a href="./assets/template/focus-2/chart-chartjs.html">Chartjs</a></li>
-                            <li><a href="./assets/template/focus-2/chart-chartist.html">Chartist</a></li>
-                            <li><a href="./assets/template/focus-2/chart-sparkline.html">Sparkline</a></li>
-                            <li><a href="./assets/template/focus-2/chart-peity.html">Peity</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Components</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-world-2"></i><span class="nav-text">Bootstrap</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/ui-accordion.html">Accordion</a></li>
-                            <li><a href="./assets/template/focus-2/ui-alert.html">Alert</a></li>
-                            <li><a href="./assets/template/focus-2/ui-badge.html">Badge</a></li>
-                            <li><a href="./assets/template/focus-2/ui-button.html">Button</a></li>
-                            <li><a href="./assets/template/focus-2/ui-modal.html">Modal</a></li>
-                            <li><a href="./assets/template/focus-2/ui-button-group.html">Button Group</a></li>
-                            <li><a href="./assets/template/focus-2/ui-list-group.html">List Group</a></li>
-                            <li><a href="./assets/template/focus-2/ui-media-object mr-3.html">Media Object</a></li>
-                            <li><a href="./assets/template/focus-2/ui-card.html">Cards</a></li>
-                            <li><a href="./assets/template/focus-2/ui-carousel.html">Carousel</a></li>
-                            <li><a href="./assets/template/focus-2/ui-dropdown.html">Dropdown</a></li>
-                            <li><a href="./assets/template/focus-2/ui-popover.html">Popover</a></li>
-                            <li><a href="./assets/template/focus-2/ui-progressbar.html">Progressbar</a></li>
-                            <li><a href="./assets/template/focus-2/ui-tab.html">Tab</a></li>
-                            <li><a href="./assets/template/focus-2/ui-typography.html">Typography</a></li>
-                            <li><a href="./assets/template/focus-2/ui-pagination.html">Pagination</a></li>
-                            <li><a href="./assets/template/focus-2/ui-grid.html">Grid</a></li>
+            <!-- Main Content -->
+            <div id="content">
 
-                        </ul>
-                    </li>
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-plug"></i><span class="nav-text">Plugins</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/uc-select2.html">Select 2</a></li>
-                            <li><a href="./assets/template/focus-2/uc-nestable.html">Nestedable</a></li>
-                            <li><a href="./assets/template/focus-2/uc-noui-slider.html">Noui Slider</a></li>
-                            <li><a href="./assets/template/focus-2/uc-sweetalert.html">Sweet Alert</a></li>
-                            <li><a href="./assets/template/focus-2/uc-toastr.html">Toastr</a></li>
-                            <li><a href="./assets/template/focus-2/map-jqvmap.html">Jqv Map</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="widget-basic.html" aria-expanded="false"><i class="icon icon-globe-2"></i><span
-                                class="nav-text">Widget</span></a></li>
-                    <li class="nav-label">Forms</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-form"></i><span class="nav-text">Forms</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/form-element.html">Form Elements</a></li>
-                            <li><a href="./assets/template/focus-2/form-wizard.html">Wizard</a></li>
-                            <li><a href="./assets/template/focus-2/form-editor-summernote.html">Summernote</a></li>
-                            <li><a href="./assets/template/focus-2/assets/template/focus-2/form-pickers.html">Pickers</a></li>
-                            <li><a href="./assets/template/focus-2/assets/template/focus-2/form-validation-jquery.html">Jquery Validate</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-label">Table</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-layout-25"></i><span class="nav-text">Table</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/table-bootstrap-basic.html">Bootstrap</a></li>
-                            <li><a href="./assets/template/focus-2/table-datatable-basic.html">Datatable</a></li>
-                        </ul>
-                    </li>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
 
-                    <li class="nav-label">Extra</li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                                class="icon icon-single-copy-06"></i><span class="nav-text">Pages</span></a>
-                        <ul aria-expanded="false">
-                            <li><a href="./assets/template/focus-2/page-register.html">Register</a></li>
-                            <li><a href="./assets/template/focus-2/page-login.html">Login</a></li>
-                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
-                                <ul aria-expanded="false">
-                                    <li><a href="./assets/template/focus-2/page-error-400.html">Error 400</a></li>
-                                    <li><a href="./assets/template/focus-2/page-error-403.html">Error 403</a></li>
-                                    <li><a href="./assets/template/focus-2/page-error-404.html">Error 404</a></li>
-                                    <li><a href="./assets/template/focus-2/page-error-500.html">Error 500</a></li>
-                                    <li><a href="./assets/template/focus-2/page-error-503.html">Error 503</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./page-lock-screen.html">Lock Screen</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--**********************************
-            Sidebar end
-        ***********************************-->
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="./assets/template/sb-admin-2/img/undraw_profile_1.svg" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="./assets/template/sb-admin-2/img/undraw_profile_2.svg" alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="./assets/template/sb-admin-2/img/undraw_profile_3.svg" alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="./assets/template/sb-admin-2/img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
