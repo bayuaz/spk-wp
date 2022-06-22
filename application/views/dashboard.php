@@ -3,7 +3,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Beranda</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -17,11 +17,8 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Selamat Datang</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
+                                    <p><b>Aplikasi Sistem Pendukung Keputusan menggunakan Metode Weight Product</b></p>
+                                    <p class="mb-0">Silahkan pilih menu di samping untuk melakukan pengolahan data!</p>
                                 </div>
                             </div>
 
