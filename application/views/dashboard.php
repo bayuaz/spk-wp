@@ -17,7 +17,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Selamat Datang</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p><b>Aplikasi Sistem Pendukung Keputusan menggunakan Metode Weight Product</b></p>
+                                    <p><b>Aplikasi Sistem Pendukung Keputusan menggunakan Metode Weight Product - Rekomendasi Posyandu Terbaik</b></p>
                                     <p class="mb-0">Silahkan pilih menu di samping untuk melakukan pengolahan data!</p>
                                 </div>
                             </div>

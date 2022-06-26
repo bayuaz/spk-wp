@@ -2,7 +2,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Saya &copy; <?= date('Y') ?></span>
+                        <span>Copyright &copy; <?= date('Y') ?></span>
                     </div>
                 </div>
             </footer>
@@ -33,7 +33,7 @@
                 <div class="modal-body">Tekan tombol "Keluar" di bawah jika ingin mengakhiri sesi anda!</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                    <a class="btn btn-primary" href="<?= base_url('dashboard/logout') ?>">Keluar</a>
+                    <a class="btn btn-primary" href="<?= base_url('dashboard') ?>">Keluar</a>
                 </div>
             </div>
         </div>

@@ -56,80 +56,95 @@
                 			<hr>
                 			Normalisasi Bobot W : <br>
 							<?php foreach($data_kriteria as $key => $kriteria) :
-							$no = $key+1;
-							echo "W" . $no . " = " . $kriteria['bobot_kriteria'] . "/" . $jumlah_bobot . " = " . $kriteria['bobot_kriteria']/$jumlah_bobot . '<br>';
+								$no = $key+1;
+								echo "W" . $no . " = " . $kriteria['bobot_kriteria'] . "/" . $jumlah_bobot . " = " . round($kriteria['bobot_kriteria']/$jumlah_bobot, 3) . '<br>';
 							endforeach;
 							?>
                 			<hr>
                 			Normalisasi Berdasarkan Keuntungan &amp; Biaya : <br>
 							<?php foreach($data_kriteria as $key => $kriteria) :
-							$no = $key+1;
-							$hasil_normalisasi = $kriteria['bobot_kriteria']/$jumlah_bobot;
-							$normalisasi_bk = $kriteria['jenis_kriteria'] == 'Biaya' ? ($hasil_normalisasi * -1) : $hasil_normalisasi;
-							echo "W" . $no . " = " . $normalisasi_bk . " " . " (" . $kriteria['jenis_kriteria'] . ")" . '<br>';
+								$no = $key+1;
+								$hasil_normalisasi = $kriteria['bobot_kriteria']/$jumlah_bobot;
+								$normalisasi_bk = $kriteria['jenis_kriteria'] == 'Biaya' ? ($hasil_normalisasi * -1) : $hasil_normalisasi;
+								echo "W" . $no . " = " . round($normalisasi_bk, 3) . " " . " (" . $kriteria['jenis_kriteria'] . ")" . '<br>';
 							endforeach;
 							?>
 							<hr>
-                			<h3 class="page-header">Tahap 2: Mencari Nilai S</h3>
+                			<h3>Tahap 2 : Mencari Nilai S</h3>
                 			<hr>
-                			S1 =
-                			(2 <sup>0.208</sup>)&nbsp;
-                			(3 <sup>0.167</sup>)&nbsp;
-                			(5 <sup>0.25</sup>)&nbsp;
-                			(3.5 <sup>0.208</sup>)&nbsp;
-                			(3 <sup>0.167</sup>)&nbsp;
-                			&nbsp;&nbsp; = 3.235
-                			<br>
-                			S2 =
-                			(4 <sup>0.208</sup>)&nbsp;
-                			(5 <sup>0.167</sup>)&nbsp;
-                			(2 <sup>0.25</sup>)&nbsp;
-                			(3.6 <sup>0.208</sup>)&nbsp;
-                			(3 <sup>0.167</sup>)&nbsp;
-                			&nbsp;&nbsp; = 3.255
-                			<br>
-                			S3 =
-                			(2 <sup>0.208</sup>)&nbsp;
-                			(3 <sup>0.167</sup>)&nbsp;
-                			(3 <sup>0.25</sup>)&nbsp;
-                			(3.21 <sup>0.208</sup>)&nbsp;
-                			(2 <sup>0.167</sup>)&nbsp;
-                			&nbsp;&nbsp; = 2.613
-                			<br>
-                			S4 =
-                			(3 <sup>0.208</sup>)&nbsp;
-                			(4 <sup>0.167</sup>)&nbsp;
-                			(2 <sup>0.25</sup>)&nbsp;
-                			(3.15 <sup>0.208</sup>)&nbsp;
-                			(2 <sup>0.167</sup>)&nbsp;
-                			&nbsp;&nbsp; = 2.685
-                			<br>
+							<?php $hasil_kali = [];
+							foreach($data_nilai as $key => $nilai) :
+								$hasil_pangkat = [];
+								$no = $key+1;
+								$detail_nilai = explode(",", $nilai['nilai']);
+								$jumlah_nilai = count($detail_nilai);
+								echo "S" . $no . " = ";
 
-                			<div class="m-5"></div>
-
-                			<h3 class="page-header">Tahap 3: Mencari Nilai V</h3>
+								foreach($detail_nilai as $key_detail => $detail) :
+									$hasil_normalisasi = $data_kriteria[$key_detail]['bobot_kriteria']/$jumlah_bobot;
+									$normalisasi_bk = $data_kriteria[$key_detail]['jenis_kriteria'] == 'Biaya' ? ($hasil_normalisasi * -1) : $hasil_normalisasi;
+									$hasil_pangkat[$key_detail] = round(pow($detail, round($normalisasi_bk, 3)), 3);
+									echo "(" . $detail. " <sup>" . round($normalisasi_bk, 3) . "</sup>";
+									echo $key_detail == $jumlah_nilai-1 ? ") = " : ") * ";
+								endforeach;
+								
+								$hasil_kali[$key] =  round(array_product($hasil_pangkat), 3);
+								echo round(array_product($hasil_pangkat), 3) . '<br>';
+							endforeach; ?>
+							<hr>
+                			<h3>Tahap 3 : Mencari Nilai V</h3>
                 			<hr>
-                			V1 =
-                			3.235/11.789
-                			= 0.274
-                			<br>
-                			V2 =
-                			3.255/11.789
-                			= 0.276
-                			<br>
-                			V3 =
-                			2.613/11.789
-                			= 0.222
-                			<br>
-                			V4 =
-                			2.685/11.789
-                			= 0.228
-                			<br>
-
-                			<div class="m-5"></div>
-
-                			<h3 class="page-header">Hasil</h3>
+							<?php  $jumlah_s = array_sum($hasil_kali);
+							$hasil_akhir = [];
+							foreach($hasil_kali as $key => $hasil) :
+								$no = $key+1;
+								$hasil_akhir[$key]['nama'] = $data_alternatif[$key]['nama_alternatif'];
+								$hasil_akhir[$key]['nilai'] = round($hasil/$jumlah_s, 3);
+								echo "V" . $no . " = " . $hasil . "/" . $jumlah_s . " = " . round($hasil/$jumlah_s, 3) . "<br>";
+							endforeach;
+							?>
+							<hr>
+                			<h3>Hasil</h3>
                 			<hr>
+							<?php
+							function cmp($a, $b) {
+								if ($a['nilai'] == $b['nilai']) {
+									return 0;
+								}
+								return ($a['nilai'] < $b['nilai']) ? 1 :- 1;
+							} 
+							
+							uasort($hasil_akhir, 'cmp');
+							?>
+							
+							<div class="table-responsive">
+                				<table class="table table-hover table-bordered" width="100%" cellspacing="0">
+                					<thead>
+                						<tr>
+                							<th>No</th>
+                							<th>Alternatif</th>
+                							<th>Nilai</th>
+                						</tr>
+                					</thead>
+                					<tfoot>
+                						<tr>
+                							<th>No</th>
+                							<th>Alternatif</th>
+                							<th>Nilai</th>
+                						</tr>
+                					</tfoot>
+                					<tbody>
+                						<?php $no = 0;
+										foreach($hasil_akhir as $key => $nilai_akhir) :?>
+                						<tr>
+                							<td <?= $no == 0 ? 'class="text-success"' : '' ?>><?= ++$no ?></td>
+                							<td <?= $no == 1 ? 'class="text-success"' : '' ?>><?= $no == 1 ? $hasil_akhir[$key]['nama'] . " <small>(alternatif terbaik)</small><i class='fas fa-check pl-2'></i>" : $hasil_akhir[$key]['nama'] ?></td>
+                							<td <?= $no == 1 ? 'class="text-success"' : '' ?>><?= $hasil_akhir[$key]['nilai'] ?></td>
+                						</tr>
+                						<?php endforeach; ?>
+                					</tbody>
+                				</table>
+                			</div>
                 		</div>
                 	</div>
 
