@@ -40,22 +40,59 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="./assets/template/sb-admin-2/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/template/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('assets/template/sb-admin-2/vendor/jquery/jquery.min.js') ?>"></script>
+    <script src="<?= base_url('assets/template/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="./assets/template/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?= base_url('assets/template/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="./assets/template/sb-admin-2/js/sb-admin-2.min.js"></script>
-
+    <script src="<?= base_url('assets/template/sb-admin-2/js/sb-admin-2.min.js') ?>"></script>
+    
     <!-- Page level plugins -->
-    <script src="./assets/template/sb-admin-2/vendor/chart.js/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <?php if (strtolower($this->uri->uri_string()) == 'kriteria' || strtolower($this->uri->uri_string()) == 'alternatif') : ?>
+    <script src="<?= base_url('assets/template/sb-admin-2/vendor/datatables/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?= base_url('assets/template/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js') ?>"></script>
+    <?php endif; ?>
 
     <!-- Page level custom scripts -->
-    <script src="./assets/template/sb-admin-2/js/demo/chart-area-demo.js"></script>
-    <script src="./assets/template/sb-admin-2/js/demo/chart-pie-demo.js"></script>
+    <?php if (strtolower($this->uri->uri_string()) == 'kriteria' || strtolower($this->uri->uri_string()) == 'alternatif') : ?>
+    <script src="<?= base_url('assets/template/sb-admin-2/js/demo/datatables-demo.js') ?>"></script>
+    <?php endif; ?>
+    
 
+    <?php 
+    if ($this->session->userdata('success')) {
+      echo 
+      "<script type='text/javascript'>
+        Toastify({
+            text: '".$this->session->userdata('success')."',
+            duration: 3000,
+            style: {
+                background: 'linear-gradient(to right, #00b09b, #96c93d)',
+            },
+        }).showToast();
+      </script>";
+
+      $this->session->unset_userdata('success');
+    }
+
+    if ($this->session->userdata('failed')) {
+        echo 
+        "<script type='text/javascript'>
+        Toastify({
+            text: '".$this->session->userdata('failed')."',
+            duration: 3000,
+            style: {
+                background: 'linear-gradient(to right, #ff5f6d, #ffc371)',
+            },
+        }).showToast();
+      </script>";
+
+      $this->session->unset_userdata('failed');
+    }
+    ?>
 </body>
 
 </html>
