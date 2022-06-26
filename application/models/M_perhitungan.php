@@ -46,4 +46,18 @@ class M_perhitungan extends CI_Model {
             return array();
         }
     }
+
+    function get_jumlah_bobot() {
+        $sql = "SELECT SUM(bobot_kriteria) as jumlah_bobot FROM tbl_kriteria;";
+        // execute
+        $query = $this->db->query($sql);
+        // cek result
+        if ($query->num_rows() > 0) {
+            $result = $query->row_array();
+            $query->free_result();
+            return $result['jumlah_bobot'];
+        } else {
+            return array();
+        }
+    }
 }

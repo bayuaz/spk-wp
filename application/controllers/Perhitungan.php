@@ -14,7 +14,8 @@ class Perhitungan extends CI_Controller {
 		$data['data_kriteria'] = $this->M_perhitungan->get_data_kriteria();
 		$data['data_alternatif'] = $this->M_perhitungan->get_data_alternatif();
 		$data['data_nilai'] = $this->M_perhitungan->get_data_nilai();
-
+		$data['jumlah_bobot'] = $this->M_perhitungan->get_jumlah_bobot();
+		
 		$this->vic_lib->view('hitung/index', $data);
 	}
 }
