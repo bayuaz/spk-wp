@@ -33,7 +33,7 @@
                 <div class="modal-body">Tekan tombol "Keluar" di bawah jika ingin mengakhiri sesi anda!</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Tidak</button>
-                    <a class="btn btn-primary" href="<?= base_url('dashboard') ?>">Keluar</a>
+                    <a class="btn btn-primary" href="<?= base_url('dashboard/keluar') ?>">Keluar</a>
                 </div>
             </div>
         </div>

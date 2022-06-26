@@ -6,6 +6,11 @@ class Alternatif extends CI_Controller {
 	{	
 		parent::__construct();
 		$this->load->model('M_alternatif');
+
+		// cek status login
+		if ($this->M_alternatif->cek_status() != 'login') {
+			redirect('login');
+		}
 	}
 
 	public function index()

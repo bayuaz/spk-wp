@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_alternatif extends CI_Model {
+    function cek_status() {
+		return $this->session->userdata('status');
+	}
+    
     function get_data_alternatif() {
         $sql = "SELECT * FROM tbl_alternatif";
         // execute

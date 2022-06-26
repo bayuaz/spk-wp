@@ -6,6 +6,11 @@ class Kriteria extends CI_Controller {
 	{	
 		parent::__construct();
 		$this->load->model('M_kriteria');
+
+		// cek status login
+		if ($this->M_kriteria->cek_status() != 'login') {
+			redirect('login');
+		}
 	}
 
 	public function index()

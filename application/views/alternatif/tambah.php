@@ -24,7 +24,7 @@
                 								Alternatif</label>
                 							<div class="col-sm-4">
                 								<input type="text" class="form-control " id="kode"
-                									name="kode" value="<?= set_value('kode') ?>" autocomplete="off" required>
+                									name="kode" value="<?= set_value('kode') ?>" placeholder="Contoh: A1, A2, C3, dll" autocomplete="off" required>
                 							</div>
                 						</div>
                 						<div class="form-group row">
@@ -32,7 +32,7 @@
                 								Alternatif</label>
                 							<div class="col-sm-4">
                 								<input type="text" class="form-control " id="nama"
-                									name="nama" value="<?= set_value('nama') ?>" autocomplete="off" required>
+                									name="nama" value="<?= set_value('nama') ?>" placeholder="Contoh: Mensa, Android, dll" autocomplete="off" required>
                 							</div>
                 						</div>
                 					</div>

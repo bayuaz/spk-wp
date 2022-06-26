@@ -6,6 +6,11 @@ class Perhitungan extends CI_Controller {
 	{	
 		parent::__construct();
 		$this->load->model('M_perhitungan');
+
+		// cek status login
+		if ($this->M_perhitungan->cek_status() != 'login') {
+			redirect('login');
+		}
 	}
 
 	public function index()
