@@ -1,0 +1,10 @@
+#1 Import Database
+
+1. Buka localhost/phpmyadmin
+2. Buat database baru dengan nama spk_posyandu
+3. Klik menu Import dan pilih file spk_posyandu.sql pada folder database
+
+#2 Kridensial Login
+
+Username    : admin
+Password    : admin@123
